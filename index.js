@@ -46,8 +46,15 @@ database.where({ name: 'Guilherme' }).from('user').delete().then(data => {
     console.log(err)
 })*/
 
-// Update 
+/* Update 
 database.where({ id: 1 }).from('user').update({ pass: 'admin2469' }).then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err)
+})*/
+
+//Order by
+database.select('*').from('user').orderBy('id', 'desc').then(data => {
     console.log(data)
 }).catch(err => {
     console.log(err)
