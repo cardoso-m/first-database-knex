@@ -39,8 +39,9 @@ database.where({ name: 'Matheus' }).from('user').then(data => {
     console.log(err)
 }) */
 
+/* Delete
 database.where({ name: 'Guilherme' }).from('user').delete().then(data => {
     console.log(data)
 }).catch(err => {
     console.log(err)
-})
+})*/
