@@ -31,3 +31,10 @@ database.select('*').from('user').then(data => {
 }).catch(err => {
     console.log(err)
 })*/
+
+/* Select com Where
+database.where({ name: 'Matheus' }).from('user').then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err)
+}) */
