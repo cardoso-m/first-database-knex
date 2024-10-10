@@ -18,8 +18,16 @@ var data = [
     }
 ]
 
+/* Insert de dados no banco
 database.insert(data).into('user').then(data =>{
     console.log(data)
 }).catch( err => {
     console.log(err)
-})
+})*/
+
+/* Select no banco de dados
+database.select('*').from('user').then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err)
+})*/
