@@ -38,3 +38,9 @@ database.where({ name: 'Matheus' }).from('user').then(data => {
 }).catch(err => {
     console.log(err)
 }) */
+
+database.where({ name: 'Guilherme' }).from('user').delete().then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err)
+})
