@@ -2,26 +2,23 @@ const database = require('./database')
 
 var data = [
     {
-        name: 'Matheus',
-        email: 'matheus@gmail.com',
-        pass: 'mat6868'
+        name: 'Processador',
+        user_id: 3
     },
     {
-        name: 'Guilherme',
-        email: 'guilherme@gmail.com',
-        pass: 'gui99283'
+        name: 'Cooler',
+        user_id: 3
     },
     {
-        name: 'Kaue',
-        email: 'kaue@gmail.com',
-        pass: '93890293'
+        name: 'SSD',
+        user_id: 3
     }
 ]
 
-/* Insert de dados no banco
-database.insert(data).into('user').then(data =>{
+/* Insert de dados no banco 
+database.insert(data).into('products').then(data => {
     console.log(data)
-}).catch( err => {
+}).catch(err => {
     console.log(err)
 })*/
 
@@ -53,8 +50,15 @@ database.where({ id: 1 }).from('user').update({ pass: 'admin2469' }).then(data =
     console.log(err)
 })*/
 
-//Order by
+/* Order by
 database.select('*').from('user').orderBy('id', 'desc').then(data => {
+    console.log(data)
+}).catch(err => {
+    console.log(err)
+})*/
+
+// Join com where
+database.select(['user.name', 'products.name as name_product']).table('user').innerJoin('products', 'products.user_id', 'user.id').where('user.id', 1).then(data => {
     console.log(data)
 }).catch(err => {
     console.log(err)
